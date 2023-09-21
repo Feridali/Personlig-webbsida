@@ -1,8 +1,8 @@
 body {
   background-image: url(img/minbild.jpeg);
-  height: 100vh;
 }
 h1 {
+  margin-top: 5%;
   font-size: 24px;
   color: #333;
   text-align: center;
@@ -34,8 +34,8 @@ input {
 }
 
 .text-ruta {
-  width: 200px;
-  margin-left: 600px;
+  width: 30%;
+  margin-left: 35%;
 }
 
 label {
@@ -65,8 +65,33 @@ button[type="submit"] {
 button[type="submit"]:hover {
   background-color: #0056b3;
 }
+.navbar ul {
+  list-style: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  margin-bottom: -30px;
+}
+.navbar li {
+  display: inline-block;
+}
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  width: 100px;
+  display: block;
+  padding: 25px 20px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+.navbar a:hover {
+  background: orange;
+}
 @media screen and (max-width: 767px) {
-  /* Justera typsnittsstorlekar och marginaler för mindre skärmar */
+  /* Justerar typsnittsstorlekar och marginaler för mindre skärmar */
   h1 {
     font-size: 24px;
   }
@@ -78,5 +103,10 @@ button[type="submit"]:hover {
   .text-ruta {
     margin-bottom: 10px;
     margin-left: 30%;
+  }
+  .navbar ul {
+    /* såg till så att menyn hamnade bredvid varandra  */
+    display: flex;
+    flex-direction: row;
   }
 }

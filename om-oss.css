@@ -2,6 +2,7 @@ body {
   background-image: url(img/minbild.jpeg);
 }
 h1 {
+  margin-top: 5%;
   text-align: center;
   color: beige;
   background-color: transparent;
@@ -17,12 +18,37 @@ p {
   width: 30%;
   text-align: center;
   color: beige;
-  margin-left: 500px;
+  margin-left: 35%;
   background-color: rgb(205, 194, 215);
   animation-name: my-animation;
   animation-duration: 2s;
   animation-iteration-count: infinite;
   font-family: "sofia", sans-serif;
+}
+.navbar ul {
+  list-style: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  margin-bottom: -30px;
+}
+.navbar li {
+  display: inline-block;
+}
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  width: 100px;
+  display: block;
+  padding: 25px 20px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+.navbar a:hover {
+  background: orange;
 }
 
 @keyframes my-animation {
@@ -31,5 +57,20 @@ p {
   }
   to {
     background-color: grey;
+  }
+}
+img {
+  width: 10%;
+  border-radius: 50%;
+
+  margin-left: 45%;
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 767px) {
+  .navbar ul {
+    /* såg till så att menyn hamnade bredvid varandra  */
+    display: flex;
+    flex-direction: row;
   }
 }

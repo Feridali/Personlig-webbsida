@@ -21,18 +21,17 @@ p {
   color: #ededed;
   text-decoration: none;
   font-weight: 600;
-  height: 200vh;
 }
 
 body {
   background-image: url(img/minbild.jpeg);
+  background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   font-family: Arial;
   display: grid;
   grid-template-columns: 1fr 2fr; /* Två kolumner, förhållandet 1:2 */
   grid-gap: 20px; /* Avstånd mellan gridceller */
-  height: 99vh;
 }
 
 img {
@@ -49,6 +48,10 @@ img {
   margin: 0;
   text-align: center;
   margin-bottom: -30px;
+
+  /* såg till så att menyn hamnade bredvid varandra  */
+  display: flex;
+  flex-direction: row;
 }
 .navbar li {
   display: inline-block;
@@ -77,6 +80,7 @@ img {
   color: beige;
 }
 .home-content h2:hover {
+  /*här har jag gjort så när man lägger musen på texten så lyser texten orange*/
   color: orange;
 }
 .home-content h3 {
@@ -86,6 +90,7 @@ img {
   transition: font-size 0.3s;
 }
 .home-content h3:hover {
+  /* här har jag animerat texten*/
   font-size: 42px;
 }
 .home-content p {
@@ -127,18 +132,14 @@ img {
   color: orange;
 }
 .home-sci {
-  position: absolute;
-  width: 170px;
+  grid-area: home-sci;
   display: block;
   justify-content: space-between;
-  margin-top: 50px;
   grid-column: 2; /* Placerar denna i kolumn 1*/
-  flex-direction: column;
   align-items: center;
-  gap: 10px;
-  margin-top: 53%;
-  margin-left: 65%;
+  margin-top: 2%;
 }
+
 .home-sci a {
   display: inline-flex;
   justify-content: center;
@@ -162,8 +163,8 @@ img {
   body {
     padding: 20px;
     display: block;
-    background-size: auto;
-    height: 99vh;
+    height: 100vh;
+    background-attachment: fixed; /* testade mig fram men dennna gjorde så jag fick till så att backgrunden täkte sidan på mobil */
   }
   h1 {
     font-size: 30px;
@@ -198,20 +199,25 @@ img {
     border-radius: 10px;
   }
   .navbar {
-    overflow: scroll;
+    background-size: cover;
     background-color: #333;
     position: relative;
+    width: 98vw; /* såg till så att bakgrunden täckte texten */
   }
   .navbar #myLinks {
     display: none;
+  }
+  .navbar ul {
+    /* såg till så att menyn hamnade bredvid varandra  */
+    display: flex;
+    flex-direction: row;
   }
   .navbar a {
     float: left;
     color: white;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: 17px;
-    display: block;
+    font-size: 16px;
     text-align: center;
   }
   .navbar a.icon {
@@ -241,4 +247,22 @@ img {
 }
 .navbar .active {
   display: none;
+}
+@media screen and (max-width: 1024px) {
+  .box {
+    display: block;
+  }
+  body {
+    background-size: cover;
+    height: 99vh;
+  }
+}
+@media screen and (max-width: 1025px) {
+  .box {
+    display: block;
+  }
+  body {
+    height: 99vh;
+    background-attachment: fixed;
+  }
 }
