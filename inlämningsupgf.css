@@ -24,7 +24,7 @@ p {
 }
 
 body {
-  background-image: url(img/minbild.jpeg);
+  background-image: url(img/minbild.jpeg); /* min bakgrunds bild och styling */
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -35,6 +35,7 @@ body {
 }
 
 img {
+  /* här är min bild, där jag gjorde den rund och bilden större */
   width: 100px;
   border-radius: 50%;
   margin-left: 30%;
@@ -42,6 +43,7 @@ img {
 }
 
 .navbar ul {
+  /* här styla jag menyn */
   list-style: none;
   background: transparent;
   padding: 0;
@@ -57,6 +59,7 @@ img {
   display: inline-block;
 }
 .navbar a {
+  /* här styla jag själva knpptrycken i menyn */
   text-decoration: none;
   color: #fff;
   width: 100px;
@@ -68,6 +71,7 @@ img {
   text-align: center;
 }
 .navbar a:hover {
+  /* här la ja till så menyn blir orange när jag lägger musen */
   background: orange;
 }
 .home-content {
@@ -107,6 +111,7 @@ img {
   height: 50px;
 }
 .btn-box a {
+  /* här jobbade jag med loggorna (X och kontakt)  */
   position: relative;
   display: inline-flex;
   justify-content: center;
@@ -135,7 +140,7 @@ img {
   grid-area: home-sci;
   display: block;
   justify-content: space-between;
-  grid-column: 2; /* Placerar denna i kolumn 1*/
+  grid-column: 2; /* Placerar denna i kolumn 2*/
   align-items: center;
   margin-top: 2%;
 }
@@ -168,6 +173,7 @@ img {
   }
   h1 {
     font-size: 30px;
+    margin-left: 20%;
   }
   .logo {
     font-size: 20px;
@@ -200,7 +206,7 @@ img {
   }
   .navbar {
     background-size: cover;
-    background-color: #333;
+    background-color: transparent;
     position: relative;
     width: 98vw; /* såg till så att bakgrunden täckte texten */
   }
@@ -208,7 +214,7 @@ img {
     display: none;
   }
   .navbar ul {
-    /* såg till så att menyn hamnade bredvid varandra  */
+    /* såg till så att menyn staplades bredvid varanadra  */
     display: flex;
     flex-direction: row;
   }
@@ -226,7 +232,7 @@ img {
 
   .navbar a:hover {
     background-color: #ddd;
-    color: black;
+    color: orange;
   }
 
   .active {
@@ -252,6 +258,7 @@ img {
   .box {
     display: block;
   }
+
   body {
     background-size: cover;
     height: 99vh;
